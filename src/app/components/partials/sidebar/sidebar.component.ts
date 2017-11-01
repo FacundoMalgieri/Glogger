@@ -46,4 +46,8 @@ export class SideBarComponent implements AfterViewInit {
             });
         });
     }
+
+    goToSuite(i) {
+        this._router.navigate(['/suite/' + i]);
+    }
 }

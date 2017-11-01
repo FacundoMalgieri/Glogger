@@ -1,0 +1,23 @@
+#goTop {
+    position: fixed;
+    right: 2.5%;
+    bottom: 10%;
+    color: rgb(24.5%, 28.6%, 26.5%) !important;
+    text-decoration: none;    
+    cursor: pointer;
+    font-size: 25px;     
+}
+
+#goTop:hover {
+    text-decoration: none;
+    font-size: 30px;    
+}
+
+#footer {
+    background: #FFFFFF;
+    min-height: 50px;
+    text-align: center;
+    padding: 1%;
+    margin-top: 1%;
+}
+

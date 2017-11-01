@@ -2,9 +2,16 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.6.
 
+## Prerequisites
+
+* Node `https://nodejs.org/en/`
+* npm install -g angular-cli
+
 ## Install
 
-Download the code from ``
+* Download the code from `https://github.com/FacundoMalgieri/Glogger`
+* cd into Glogger folder
+* run npm install
 
 ## Development server
 

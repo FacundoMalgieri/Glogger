@@ -5,11 +5,11 @@ import $ from 'jquery';
 
 @Component({
     moduleId: module.id,
-    templateUrl: 'home.component.html',
-    styleUrls: ['home.component.css']
+    templateUrl: 'suites.component.html',
+    styleUrls: ['suites.component.css']
 })
 
-export class HomeComponent implements OnInit {
+export class SuitesComponent implements OnInit {
     public constructor(
         private _router: Router,
         private alertService: AlertService) { }

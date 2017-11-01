@@ -1,3 +1,5 @@
+html, body { height: 100%; }
+
 .site {
     display: flex;
     min-height: 100vh;
@@ -19,7 +21,7 @@
 }
 
 body{
-    background: #6e979c;
+    background: #908E8E;
     
 }
 
