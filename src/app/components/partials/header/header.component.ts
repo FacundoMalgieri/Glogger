@@ -24,6 +24,10 @@ export class HeaderComponent implements OnInit {
         this.router.navigate(['/home']);
     }
 
+    logout(): void {
+        this.router.navigate(['/login']);
+    }
+
     goTo(location: string): void {
         window.location.hash = location;
     }
