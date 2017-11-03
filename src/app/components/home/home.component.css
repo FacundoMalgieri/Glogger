@@ -1,3 +1,9 @@
 .col-md-10 {
     padding: 1%;
 }
+
+#searchBar {
+    width: 70%;
+    border-radius: 5px;
+    padding: 1%;
+}

@@ -1,11 +1,20 @@
 <div class="container ">
     <div class="row bg-white">
-        <div class="col-md-offset-2 col-md-10">
-            <div class=" bg-white">
-                <h2><img src="./assets/images/glogo3.png" alt="Glogger Logo"> Welcome to Glogger 3.0</h2>
+        <div class="col-md-12">
+            <div class="bg-white text-center">
+                <h4>Search: <input id="searchBar" type="text" placeholder="Filter" [(ngModel)]="listFilter" [ngModelOptions]="{standalone: true}"></h4>
             </div>
         </div>
     </div>
     <br>
-    <charts></charts>
+    <div *ngFor="let i of array | FilterPipe: listFilter">
+        <div class="row bg-white row-max-h">
+            <div class="col-md-offset-2 col-md-10">
+                <a (click)="navigateWithParam('suite',i)">
+                   <h4>{{i}}</h4>
+                </a>
+            </div>
+        </div>
+        <br>
+    </div>
 </div>

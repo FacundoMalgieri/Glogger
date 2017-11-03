@@ -1,11 +1,11 @@
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SweetAlertService } from 'ng2-sweetalert2';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from "@angular/router";
 import { CommonModule } from "@angular/common";
+import { ChartsModule } from 'ng2-charts';
 import { HttpModule } from '@angular/http';
 import { NgModule } from '@angular/core';
-import { SweetAlertService } from 'ng2-sweetalert2';
-import { ChartsModule } from 'ng2-charts';
 
 import { SideBarComponent } from "./components/partials/sidebar/sidebar.component";
 import { ChartsComponent } from "./components/partials/charts/charts.component";
@@ -15,10 +15,11 @@ import { SuitesComponent } from "./components/suites/suites.component";
 import { SuiteComponent } from "./components/suite/suite.component";
 import { LoginComponent } from "./components/login/login.component";
 import { MainComponent } from "./components/main/main.component";
+import { HomeComponent } from "app/components/home/home.component";
 import { AlertService } from "./services/alert.service";
 import { AppComponent } from './app.component';
+import { FilterPipe } from "./services/filter.pipe";
 import { AppRoutes } from "./app.routes";
-import { HomeComponent } from "app/components/home/home.component";
 
 /**
  * Declare your components
@@ -37,12 +38,14 @@ import { HomeComponent } from "app/components/home/home.component";
     ChartsComponent,
     SuitesComponent,
     SuiteComponent,
-    HomeComponent
+    HomeComponent,
+    FilterPipe
   ],
   imports: [
     ChartsModule,
     BrowserModule,
     ReactiveFormsModule,
+    FormsModule,
     HttpModule,
     CommonModule,
     RouterModule,

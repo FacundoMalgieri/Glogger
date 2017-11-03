@@ -2,6 +2,7 @@ import { Router } from '@angular/router';
 import { Component, Input, OnInit } from '@angular/core';
 import { AppRoutes } from "app/app.routes";
 import { AlertService } from "app/services/alert.service";
+import { BaseComponent } from "app/components/base/base.component";
 
 @Component({
     moduleId: module.id,
@@ -10,25 +11,10 @@ import { AlertService } from "app/services/alert.service";
     styleUrls: ['header.component.css']
 })
 
-export class HeaderComponent implements OnInit {
-    private currentUser: Object;     
-    
-    constructor(
-        private router: Router,
-        private alertService: AlertService) { }
-    
-    ngOnInit(): void {
-    }
+export class HeaderComponent extends BaseComponent {
+    private currentUser: Object;
 
-    home(): void {
-        this.router.navigate(['/home']);
-    }
-
-    logout(): void {
-        this.router.navigate(['/login']);
-    }
-
-    goTo(location: string): void {
-        window.location.hash = location;
+    constructor(protected router: Router, protected alertService: AlertService) {
+        super(router, alertService);
     }
 }

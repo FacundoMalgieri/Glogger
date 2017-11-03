@@ -1,6 +1,8 @@
 import { Component, AfterViewInit } from '@angular/core'
 import { Router } from '@angular/router';
 import $ from 'jquery';
+import { BaseComponent } from "app/components/base/base.component";
+import { AlertService } from "app/services/alert.service";
 
 @Component({
     moduleId: module.id,
@@ -9,9 +11,11 @@ import $ from 'jquery';
     selector: 'sidebar'
 })
 
-export class SideBarComponent implements AfterViewInit {
-    public constructor(private _router: Router) { }
-
+export class SideBarComponent extends BaseComponent implements AfterViewInit {
+    constructor(protected router: Router, protected alertService: AlertService) {
+        super(router, alertService);
+    }
+    
     ngAfterViewInit() {
         this.jQueryInitFunction();
     }
@@ -45,9 +49,5 @@ export class SideBarComponent implements AfterViewInit {
                 $('#wrapper').toggleClass('toggled');
             });
         });
-    }
-
-    goToSuite(i) {
-        this._router.navigate(['/suite/' + i]);
     }
 }

@@ -1,5 +1,19 @@
 html, body { height: 100%; }
 
+a {
+    text-decoration-line: none !important;
+    cursor: pointer;
+}
+
+.container {
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+.row-max-h {
+    height: 50px;
+}
+
 .site {
     display: flex;
     min-height: 100vh;
@@ -21,7 +35,6 @@ html, body { height: 100%; }
 }
 
 body{
-    background: #908E8E;
-    
+    background: #A7A3A3;
 }
 

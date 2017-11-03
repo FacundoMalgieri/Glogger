@@ -8,17 +8,17 @@
                        Glogger
                     </a>
             </li>
-            <li><a [routerLink]="['/home']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a></li>
+            <li><a (click)="navigate('home')">Home</a></li>
             <li class="dropdown">
-                <a [routerLink]="['/suites']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" class="dropdown-toggle" data-toggle="dropdown">Suites <span class="caret"></span></a>
+                <a (click)="navigate('suites')" class="dropdown-toggle"
+                    data-toggle="dropdown">Executions <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
                     <li class="dropdown-header"></li>
-                    <li *ngFor="let i of [0,1,2,3,4]"><a style="cursor:pointer;" (click)='goToSuite(i)'>Suite {{i}}</a></li>
+                    <li *ngFor="let i of array"><a (click)="navigateWithParam('suite',i)">Execution {{i}}</a></li>
                 </ul>
             </li>
         </ul>
     </nav>
-    <!-- /#sidebar-wrapper -->
 
     <!-- Page Content -->
     <div id="page-content-wrapper">

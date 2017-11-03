@@ -14,7 +14,7 @@ export class SuiteComponent implements OnInit {
     public constructor(
         private _router: Router,
         private route: ActivatedRoute,
-        private alertService: AlertService) { console.log('inside suite')}
+        private alertService: AlertService) { }
 
     ngOnInit(): void {
         this.route.params.subscribe(
